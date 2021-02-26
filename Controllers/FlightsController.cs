@@ -10,7 +10,7 @@ using Assignment1B.Models;
 
 namespace Assignment1B.Controllers
 {
-    public class FlightsController : Controller
+    public class FlightsController : Controller 
     {
         private readonly ApplicationDbContext _context;
 

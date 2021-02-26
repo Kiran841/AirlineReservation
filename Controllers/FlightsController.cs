@@ -17,7 +17,7 @@ namespace Assignment1B.Controllers
         public FlightsController(ApplicationDbContext context)
         {
             _context = context;
-        }
+        } 
 
         // GET: Flights
         public async Task<IActionResult> Index()

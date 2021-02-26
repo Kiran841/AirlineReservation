@@ -1,0 +1,35 @@
+﻿<h1>welcome to:</h1>
+@model IEnumerable<Assignment1B.Models.Flight>
+<h1>Kiran Airline Services</h1>
+<body style="background-color:#ffd800">
+</body>
+
+
+<a asp-controller="Airline" asp-action="AddFlight">Add a new Flight</a>
+
+<ul>
+    @foreach (var f in Model)
+    {
+        <li>
+            <a asp-controller="Airline" asp-action="Reservation" asp-route-flight="@f.Name">@f.Name</a>
+        </li>
+    }
+
+</ul>
+
+
+
+@* <ul>
+        <li>
+            <a asp-controller="Airline" asp-action="Reservation" asp-route-category="View">View</a>
+        </li>
+        <li>
+            <a asp-controller="Airline" asp-action="Reservation" asp-route-category="Book">Book</a>
+        </li>
+        <li>
+            <a asp-controller="Airline" asp-action="Reservation" asp-route-category="Cancel">Cancel</a>
+        </li>
+        <li>
+            <a asp-controller="Airline" asp-action="Reservation" asp-route-category="Delete">Delete</a>
+        </li>
+    </ul>*@

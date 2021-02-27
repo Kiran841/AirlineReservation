@@ -21,10 +21,10 @@ namespace Assignment1B.Models
         public String Photo { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:c}")]
-        [Range(0.01, 999999)]
+        
 
         public Double Price { get; set; }
-
+        [Range(0.01, 999999)]
 
         public List<OrderDetail> OrderDetails { get; set; }
         public List<Trip> Trips { get; set; }

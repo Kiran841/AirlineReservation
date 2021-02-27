@@ -9,7 +9,7 @@ namespace Assignment1B.Controllers
 {
     public class AirlineController : Controller
     {
-        public IActionResult Index(string booking)
+        public IActionResult Index()
         {
             // used fake Flight class/model to display 10 flights
             // created an object to hold a list of categories

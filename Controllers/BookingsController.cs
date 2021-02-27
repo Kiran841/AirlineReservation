@@ -64,7 +64,7 @@ namespace Assignment1B.Controllers
             if (ModelState.IsValid)
             {
                 // Check for a photo and Upload
-                if(Photo.Length > 0)
+                if( Photo.Length > 0)
                 {
                     //get a temp location of the upload file
                     var tempFile = Path.GetTempFileName();

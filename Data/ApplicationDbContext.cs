@@ -6,7 +6,7 @@ using System.Text;
 using Assignment1B.Models;
 
 namespace Assignment1B.Data
-{
+{ 
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Trip> Trips { get; set; }

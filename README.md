@@ -8,3 +8,5 @@ The information get added into the databses after connecting to the servaer whil
 I created five Model classes, views and Airline, Bookings, Flights controller 
 I added the functionaliy of Authentication.
 I hope you will enjoy using it by booking flights.
+Link to Azure:
+https://localhost:44390/

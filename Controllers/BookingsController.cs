@@ -9,9 +9,11 @@ using Assignment1B.Data;
 using Assignment1B.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Assignment1B.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class BookingsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -29,6 +31,7 @@ namespace Assignment1B.Controllers
         }
 
         // GET: Bookings/Details/5
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

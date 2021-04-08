@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Assignment1B.Models.Trip>
+
+@{
+    ViewData["Title"] = "Your Trips";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double total = 0;
+}
+
+<h1>Your Trips</h1>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Booking)
+            </th>
+            <th>
+
+            </th>
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    total += (item.Quantity * item.Price);
+        <tr>
+
+            <td>
+                <a asp-controller="Bookings" asp-action="Details" asp-route-id="@item.BookingId">@item.Booking.Name</a>
+            </td>
+            <td>
+                @if (item.Booking.Photo != null)
+                {
+                    <img src="~/img/booking_uploads/@item.Booking.Photo" alt="Flight Photo" class="thumb" />
+                }
+            </td>
+            <td class="text-right">
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td class="text-right">
+                @String.Format("{0:c}", item.Price)
+            </td>
+            <td>
+                <a asp-action="RemoveFromCart" asp-route-id="@item.TripId">Delete</a> 
+            </td>
+        </tr>
+}
+        <tr>
+            <td colspan="4" class="text-right">
+                @String.Format("{0:c}", total)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Index">Keep Booking the Flights</a>
+                <a class="btn btn-primary" asp-action="Checkout">Check Out</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

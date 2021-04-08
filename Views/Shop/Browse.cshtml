@@ -14,7 +14,7 @@
                 <div class="card mb-3 text-center h-100">
                     <div class="card-body">
                         <h5>
-                            <a asp-controller="Flights" asp-action="Index" asp-route-id="@b.FlightId">@b.Name</a>
+                            <a asp-controller="Bookings" asp-action="Details" asp-route-id="@b.BookingId">@b.Name</a>
                         </h5>
                         <img src="~/img/booking_uploads/@b.Photo" alt="FlightPhoto" class="thumb" />
                         <h6>

@@ -12,6 +12,8 @@ namespace Assignment1B.Models
         public int BookingId { get; set; }
         public DateTime DateCreated { get; set; }
         public String CustomerId { get; set; }
+        public int Quantity { get; set; }
+        public double Price { get; set; }
 
         public Booking Booking { get; set; }
     }

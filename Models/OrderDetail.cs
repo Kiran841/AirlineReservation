@@ -10,7 +10,8 @@ namespace Assignment1B.Models
         public int OrderDetailId { get; set; }
         public int BookingId { get; set; }
         public int OrderId { get; set; }
-        public Decimal Price { get; set; }
+        public double Quantity { get; set; }
+        public double Price { get; set; }
 
         public Order Order { get; set; }
 

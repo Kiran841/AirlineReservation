@@ -33,6 +33,11 @@ namespace Assignment1B
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //enable session support to store identities for the booking cart
+            services.AddSession();
+            //add config support for the Shop Controller
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -58,6 +63,9 @@ namespace Assignment1B
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSession();
+
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Assignment1B.Models.Booking>
+<h1>Passangers</h1>
+
+@if(ViewBag.category != null)
+{
+    <h2>@ViewBag.category</h2>
+}
+
+<section>
+    <div class="row">
+        @foreach (var b in Model)
+        {
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="card mb-3 text-center h-100">
+                    <div class="card-body">
+                        <h5>
+                            <a asp-controller="Flights" asp-action="Index" asp-route-id="@b.FlightId">@b.Name</a>
+                        </h5>
+                        <img src="~/img/booking_uploads/@b.Photo" alt="FlightPhoto" class="thumb" />
+                        <h6>
+                            @String.Format("{0:c}", b.Price)
+                        </h6>
+                        <p>
+                            @b.Description
+                        </p>
+
+                        @*Form*@
+                        <form method="post" action="/Shop/AddToCart">
+                            @*Hidden Field forhte selected salon id*@
+
+                            <input type="hidden" id="BookingId" name="BookingId" value="@b.BookingId" />
+
+                            <div class="form-group">
+
+                                <label class="control-label" for="Quantity">Quantity:</label>
+                                <input name="Quantity" id="Quantity" required min="1" max="99999" type="number" class="input-small" />
+
+                            </div>
+
+                            <button class="=btn btn-primary">Add To Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Assignment1B.Models.Flight>
+
+@{
+    ViewData["Title"] = "Have a look in here for all of your Flights!";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Choose a Flight</h1>
+
+<section>
+    <div class="row">
+        @foreach(var item in Model)
+        {
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <div class="card mb-3 text-center h-100">
+                    <div class="card-body">
+                        <a asp-controller="Shop" asp-action="Browse" asp-route-id="@item.FlightId">@item.Name</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

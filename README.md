@@ -10,3 +10,7 @@ I added the functionaliy of Authentication.
 I hope you will enjoy using it by booking flights.
 Link to Azure:
 https://localhost:44390/
+In assignment 2, i edited the code and showed the fuctionality of an admin, an annonomous user and the customer can do.
+Admin can access everything, customer can only see the details but cannot edit the data while an annoynomous user cant acess anything without registering and logging into the application.
+The adminn id is admin@gc.ca and password is Test123$
+The passanger id is passanger@gc.ca and password is Test123$

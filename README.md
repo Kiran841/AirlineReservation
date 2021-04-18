@@ -14,3 +14,7 @@ In assignment 2, i edited the code and showed the fuctionality of an admin, an a
 Admin can access everything, customer can only see the details but cannot edit the data while an annoynomous user cant acess anything without registering and logging into the application.
 The adminn id is admin@gc.ca and password is Test123$
 The passanger id is passanger@gc.ca and password is Test123$
+Added the API folder into the Controller sfolder.
+Then added the TripsController and ValuesController into the API folder
+The link to Github link is:
+The link to website is:

@@ -16,5 +16,5 @@ The adminn id is admin@gc.ca and password is Test123$
 The passanger id is passanger@gc.ca and password is Test123$
 Added the API folder into the Controller sfolder.
 Then added the TripsController and ValuesController into the API folder
-The link to Github link is:
-The link to website is:
+The link to Github link is:  https://github.com/Kiran841/AirlineReservation
+The link to website is:  https://localhost:44390/
